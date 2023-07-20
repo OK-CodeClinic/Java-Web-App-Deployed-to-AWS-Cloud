@@ -1,4 +1,4 @@
-#  JAVA WEB APP DEPLOYED TO AWS CLOUD (Vprofile Web app)
+#  JAVA WEB APP DEPLOYED TO AWS CLOUD (Vprofile Project)
 ## DESCRIPTION: 
 Vprofile project covers how i deployed on premises java web app, host it and run it on AWS cloud using the Lift and shift strategy. 
 
