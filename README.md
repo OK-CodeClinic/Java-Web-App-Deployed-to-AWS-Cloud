@@ -37,6 +37,16 @@ To eradicate complex management putting the objective in place, AWS cloud platfo
 ## ARCHITECTURE
 
  ![webapparch](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/093cb01e-c5d9-47ff-a5d8-41676349d142)
+### How it works;
+- User will use the url from the DNS service; the url is pointing to the Application Load Balancer (ALB) endpoint.
+- The user will use te endpoint to connect to the Load balancer using the secured https.
+- The certificate for https is our ACM attached to the ALB.
+- The ALB is in a Security group that only allow https traffic.
+- The ALb will route the request to the EC2 of Tomcaat9 that is controlled by AutoScaling group (ASG); and are embedded in a security group that only allow request from ALB from http port 8080.
+- IP address of the EC2 of Tomcat server will be connected in our Route 53 priivate hosted zone. All the IP address of the backend services will also be mentioned on the Route 53 DNS record.
+- All backend servers (Rabbitmq, Mysql, Memcache) are in a separate security group, allow traffic from the frontend server and from other backened services in the same Security Group.
+- Amazon s3 bucket connected to the Tomcat9 instance in order to have access to fetch all the application artifacts to the frontend server.
+
 
 ## FLOW OF EXECUTION
 #### Step 1:
@@ -130,8 +140,10 @@ GoDaddy
 - Create a new DNS record
 - Create CNAME; using the ALB DNs url copied as the host value.
 
-#### 
+#### Step 13:
 Autoscaling Group
+- Createb ASG for Application Load Balancer
+- Created ASG for Application frontend Server
 
 
 
