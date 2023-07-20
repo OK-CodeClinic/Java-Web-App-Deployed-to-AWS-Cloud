@@ -35,6 +35,7 @@ To eradicate complex management putting the objective in place, AWS cloud platfo
 - Ubuntu Server 22.04LTS (Instance for Apache-Tomcat9)
 
 ## ARCHITECTURE
+  ![webapparch](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/2dec57e3-5271-417e-af42-31505060ef57)
 
 #.
 ## FLOW OF EXECUTION
