@@ -64,8 +64,8 @@ SSH into all server for validation if working perfectly
 - Rabbitmq working
  ![Screenshot (110)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/0186f627-00b9-4d37-9d39-46d705e95af9)
 
--Memcache running
- ![Screenshot (111)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/49fe91e3-b611-4101-afe0-5efb72bc4364)
+- Memcache running
+  ![Screenshot (111)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/49fe91e3-b611-4101-afe0-5efb72bc4364)
 
 - Mysql running
   ![Screenshot (112)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/c16710a2-0240-426f-b2ad-4a14714bcbe5)
