@@ -36,7 +36,8 @@ To eradicate complex management putting the objective in place, AWS cloud platfo
 
 ## ARCHITECTURE
 
-#.
+ ![webapparch](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/093cb01e-c5d9-47ff-a5d8-41676349d142)
+
 ## FLOW OF EXECUTION
 #### Step 1:
 Login to AWS Console
@@ -47,21 +48,45 @@ Create Security groups;
 - Secuiry group for Application Load Balancer
 - Security Group for Apache-tomcat9
 - Security Gorup for backend services (mysql, memcahe, rabbitmq). It is important to specify the following inbound rules as follows
+  ![Screenshot (106)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/0ff23cc8-4d97-444c-ba10-9a23cc4a06a5)
+
 
 
 #### Step 4: 
 Launch all EC2 Instances and automate installation of servsers using the ```userdata.sh```
 - CentOs for mysql, rabbitmq and memcache
 - Ubuntu 22LTS for apache-tomcat9
+  ![Screenshot (108)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/015015de-f044-4719-b339-04cff0a9bc3c)
+
 
 #### Step 5:
 SSH into all server for validation if working perfectly
+- Rabbitmq working
+ ![Screenshot (110)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/0186f627-00b9-4d37-9d39-46d705e95af9)
+
+-Memcache running
+ ![Screenshot (111)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/49fe91e3-b611-4101-afe0-5efb72bc4364)
+
+- Mysql running
+  ![Screenshot (112)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/c16710a2-0240-426f-b2ad-4a14714bcbe5)
+
+- Apache-Tomcat working
+  ![Screenshot (121)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/6ef81215-b933-437e-b6d3-bda88dba35f4)
+
+
+
+
+
 
 
 #### Step 6:
 In route 53
 - Create a Private Hosted Zone; ```vprofile.in```
+  ![Screenshot (113)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/97d2ab82-5afd-4f1c-a9d6-818cb4a8fce8)
+
 - Create 3 simple record for all backened servers with their private IP address.
+  ![Screenshot (115)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/f8037de6-2020-41d7-8dc7-38d3320880e8)
+
 
 #### Step 5:
 Build artifacts from source code using maven ```mavn install```
@@ -75,8 +100,10 @@ I create an s3 bucket using the AWS-CLI
  ```aws s3 mb s3://kehinde-vprofile```
 
 #### Step 8:
-I copied built artifact from local repo to created s3 bucket
+I copied built artifact from local repo to the s3 bucket created
 ```aws s3 cp target/vprofile-v2.war```
+  ![Screenshot (120)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/8283b5a3-0135-4066-be6c-ad09b64714e8)
+
 
 #### Step 9:
 - Give IAM role access to the EC2 instance of Tomcat
