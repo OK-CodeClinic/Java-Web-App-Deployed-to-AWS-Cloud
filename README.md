@@ -146,6 +146,20 @@ Autoscaling Group
 - Created ASG for Application frontend Server
 
 
+## OUTCOME:
+- App server working
+  ![Screenshot (123)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/ff66fee1-1c40-4613-9586-d3d31f46a47a)
+
+
+- Backened Server working Perfectly
+  ![Screenshot (125)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/17cf08a3-3c1a-40fb-8002-bcd0833d2288)
+
+
+  ![Screenshot (124)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/c473599d-793c-49bd-8a37-97f3842d15df)
+
+  ![Screenshot (125)](https://github.com/OK-CodeClinic/Java-Web-App-Deployed-to-AWS-Cloud/assets/100064229/5220986f-59f5-4e59-84e8-2bba0430f4b0)
+
+
 
 
 ## Author
